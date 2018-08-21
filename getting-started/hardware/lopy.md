@@ -1,33 +1,39 @@
 # LoPy
 
-## Basic connection
+## Basic connection {#basic-connection}
 
+{% tabs %}
+{% tab title="Exp Board 2.0" %}
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy module on the the expansion board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
-![](../../.gitbook/assets/expansion_board_2_lopy.png)
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_D1o1RiKJjzcBlfJ%2FExpansion_Board_2_LoPy.png?generation=1534772069584204&alt=media)
+{% endtab %}
 
-* Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
+{% tab title="Exp Board 3.0" %}
+* Before connecting your module to an Expansion Board 3.0, you should update the firmware on the Expansion Board 3.0. Instructions on how to do this can be found [here](https://pycom.gitbook.io/dan-sbook/pytrack-pysense-pyscan/installation/firmware).
 * Look for the reset button on the module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the expansion board.
 * Insert the LoPy module on the Expansion Board with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
-![](../../.gitbook/assets/expansion_board_3_lopy.png)
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_UweAMmh-NueZ_dX%2FExpansion_Board_3_LoPy.png?generation=1534772081040942&alt=media)
+{% endtab %}
 
-* Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](../../pytrack-pysense-pyscan/installation/firmware.md).
+{% tab title="Pytrack/Pysense/Pyscan" %}
+* Before connecting your module to a Pysense/Pytrack/Pyscan board, you should update the firmware on the Pysense/Pytrack/Pyscan. Instructions on how to do this can be found [here](https://pycom.gitbook.io/dan-sbook/pytrack-pysense-pyscan/installation/firmware).
 * Look for the reset button on the LoPy module \(located at a corner of the board, next to the LED\).
 * Locate the USB connector on the Pysense/Pytrack/Pyscan.
 * Insert the module on the Pysense/Pytrack/Pyscan with the reset button pointing towards the USB connector. It should firmly click into place and the pins should now no longer be visible.
 
-![](../../.gitbook/assets/pysense_lopy.png)
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_ZvQtB3k9-QzXSEi%2FPysense_LoPy.png?generation=1534772084691543&alt=media)![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_aBQabbigN5pR8W2%2FPytrack_LoPy.png?generation=1534772068406423&alt=media)
+{% endtab %}
 
-![](../../.gitbook/assets/pytrack_lopy.png)
-
+{% tab title="USB UART Adapter" %}
 * Firstly you will need to connect power to your LoPy. You will need to supply `3.5v`-`5.5v` to the `Vin` pin.
 
 {% hint style="danger" %}
-Do _not_ feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
+Do **not** feed `3.3v` directly to the `3.3v` supply pin, this will damage the regulator.
 {% endhint %}
 
 * The connect the `RX` and `TX` of your USB UART to the `TX` and `RX` of the LoPy respectively.
@@ -38,13 +44,15 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 
 * In order to put the LoPy into bootloader mode to update the device firmware you will need to connect `P2` to `GND`. We recommend you connect a button between the two to make this simpler.
 
-![](../../.gitbook/assets/uart_lopy.png)
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIq_kogUb61sVzFipSE%2FUART_LoPy.png?generation=1534772074950525&alt=media)
+{% endtab %}
 
+{% tab title="WiFi" %}
 **Note:** This method of connection is not recommended for first time users. It is possible to lock yourself out of the device, requiring a USB connection.
 
 * In order to access the LoPy via WiFi you only need to provide `3.5v` - `5.5v` on the `Vin` pin of the LoPy:
 
-![](../../.gitbook/assets/bare_lopy.png)
+![](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LIfiUlGe6_zTmmvcuEa%2F-LKMXk1KQvBgjpw04I3u%2F-LIqa1aumXwEUaXR6jHk%2FBare_LoPy.png?generation=1534772083120637&alt=media)
 
 * By default, when the LoPy boots, it will create a WiFi access point with the following credentials:
   * SSID: `lopy-wlan`
@@ -52,6 +60,8 @@ Please ensure you have the signal level of the UART adapter set to `3.3v` before
 * Once connected to this network you will be able to access the telnet and FTP servers running on the LoPy. For both of these the login details are:
   * username: `micro`
   * password: `python`
+{% endtab %}
+{% endtabs %}
 
 ## Antennas
 
