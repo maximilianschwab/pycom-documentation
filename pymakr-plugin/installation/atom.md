@@ -12,15 +12,15 @@ Please follow these steps to install the Pymakr Plugin:
 
 ![](../../.gitbook/assets/atom_setup_step_2-1.png)
 
-3.Search for `Pymakr` and select the official Pycom Pymakr Plugin.
+3. Search for `Pymakr` and select the official Pycom Pymakr Plugin.
 
 ![](../../.gitbook/assets/atom_setup_step_3-1.png)
 
-4.You should now see and click the Install button. This will download and install the Pymakr Plugin.
+4. You should now see and click the Install button. This will download and install the Pymakr Plugin.
 
 ![](../../.gitbook/assets/atom_setup_step_4-1.png)
 
-5.That’s it! You’ve installed the Pymakr Plugin for Atom.
+5. That’s it! You’ve installed the Pymakr Plugin for Atom.
 
 ![](../../.gitbook/assets/atom_setup_step_5-1.png)
 
@@ -48,7 +48,7 @@ After installing the Pymakr Plugin, you need to take a few seconds to configure 
 
 ![](../../.gitbook/assets/atom_config_step_5.png)
 
-6.Paste the serial address you copied earlier into the text field `Device Address`
+6. Paste the serial address you copied earlier into the text field `Device Address`
 
 ![](../../.gitbook/assets/atom_config_step_6%20%281%29.png)
 
